@@ -1,0 +1,11 @@
+<%= form_for @comment do |f| %>
+<h4 style="color:green">Create a new comment here</h4>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.hidden_field :post_id, value: post.id %>
+    <%= f.submit %>
+  </div>
+<% end %>

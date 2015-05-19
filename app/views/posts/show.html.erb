@@ -1,0 +1,15 @@
+<h1 style="color:blue">SINGLE ARTICLE VIEW</h1>
+
+
+<h3><%= @post.title %></h3>
+
+<p><%= @post.body %></p>
+
+
+<h5><%= @comments.count %>POST COMMENTS </h5>
+<% @comments.each do |comment| %>
+<p><%= comment.content %></p>
+
+<% end %>
+
+<%= render :partial => '/comments/form', locals:{post: @post} %>
